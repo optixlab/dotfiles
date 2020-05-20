@@ -1,4 +1,5 @@
 "{ Yash: Vim Plug and plugins
+" call yadm add ~/.vimrc && yadm commit when you edit this file
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -10,6 +11,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'chuling/vim-equinusocio-material'
+
+" ignore these on older versions of vim
+if v:version >= 703
+   Plug 'gorodinskiy/vim-coloresque'
+   Plug 'jamessan/vim-gnupg'
+endif
+if v:version >= 704
+    Plug 'vim-pandoc/vim-pandoc'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
+endif
 " VSCode Plugin - details: below in code
 " Plug 'airblade/vim-gitgutter'
 " Initialize plugin system

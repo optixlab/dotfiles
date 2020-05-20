@@ -4,3 +4,11 @@ if command -v vim >/dev/null 2>&1; then
   echo "Bootstraping Vim"
   vim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
 fi
+# Install powerline for Vim
+sudo apt-get -y install python-pip3 # Ubuntu
+pip3 install powerline-status
+
+# Install [eg](https://github.com/srsudar/eg) for CLI examples
+pip3 install eg
+
+
