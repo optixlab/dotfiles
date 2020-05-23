@@ -1,6 +1,13 @@
 "{ Yash: Vim Plug and plugins
 " call yadm add ~/.vimrc && yadm commit when you edit this file
 " Specify a directory for plugins
+" Download vim-plug if missing
+" Ref: yadm.io/docs/bootstrap
+if empty(glob("~/.vim/autoload/plug.vim"))
+  silent! execute '!curl --create-dirs -fsSLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * silent! PlugInstall
+endif
+
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
