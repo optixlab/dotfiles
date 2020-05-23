@@ -11,4 +11,6 @@ pip3 install powerline-status
 # Install [eg](https://github.com/srsudar/eg) for CLI examples
 pip3 install eg
 
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 

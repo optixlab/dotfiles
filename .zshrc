@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/yashroff/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -124,3 +124,5 @@ unsetopt BEEP
 unsetopt LIST_BEEP
 # Yash
 export DISPLAY=localhost:0.0
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
